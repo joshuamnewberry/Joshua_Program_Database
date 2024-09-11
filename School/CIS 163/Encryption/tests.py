@@ -1,7 +1,7 @@
 import unittest
-from encrypt import Salting, ReverseCipher1, ReverseCipher2, XORCipher, CaesarCipher, VigenereCipher, CustomMappingCipher
+from encrypt import*
 
-class TestEncrypting(unittest.TestCase):
+class TestSaltingEncrypting(unittest.TestCase):
 
     #Salting Non String Text Input
     def test_SaltingTextNoStr(self) -> None:
@@ -44,6 +44,8 @@ class TestEncrypting(unittest.TestCase):
         a = Salting("", "Key")
         self.assertEqual(str(a), "")
     
+class TestReverese1Encrypting(unittest.TestCase):
+    
     #ReverseCipher1 Non String Text Input
     def test_Reverse1TextNoStr(self) -> None:
         with self.assertRaises(TypeError):
@@ -58,6 +60,8 @@ class TestEncrypting(unittest.TestCase):
     def test_Reverse1Decrypted(self) -> None:
         a = ReverseCipher1("Cipher In Reverse")
         self.assertEqual(str(a), "Cipher In Reverse")
+
+class TestReverse2Encrypting(unittest.TestCase):
     
     #ReverseCipher2 Non String Text Input
     def test_Reverse2TextNoStr(self) -> None:
@@ -73,6 +77,8 @@ class TestEncrypting(unittest.TestCase):
     def test_Reverse2Decrypted(self) -> None:
         a = ReverseCipher1("Cipher In Reverse")
         self.assertEqual(str(a), "Cipher In Reverse")
+
+class TestXOREncrypting(unittest.TestCase):
     
     #XORCipher Non String Text Input
     def test_XORTextNoStr(self) -> None:
@@ -104,6 +110,8 @@ class TestEncrypting(unittest.TestCase):
     def text_XORDecrypted(self) -> None:
         a = XORCipher("Cipher", "hidden")
         self.assertEqual(str(a), "Cipher")
+
+class TestCaesarEncrypting(unittest.TestCase):
     
     #CaesarCipher Non String Text Input
     def test_CaesarTextNoStr(self) -> None:
@@ -165,6 +173,8 @@ class TestEncrypting(unittest.TestCase):
     def test_CaesarDecryptedNeg(self) -> None:
         a = CaesarCipher("Cipher", -50)
         self.assertEqual(str(a), "Cipher")
+
+class TestVigenereEncrypting(unittest.TestCase):
     
     #VigenereCipher Non String Text Input
     def test_VigenereTextNoStr(self) -> None:
@@ -186,7 +196,7 @@ class TestEncrypting(unittest.TestCase):
         a = VigenereCipher("Cipher", "Key")
         string = str(a)
         self.assertEqual(a.key, "Key")
-
+    
     #VigenereCipher Int Key Value
     def test_VigenereIntKeyValue(self) -> None:
         a = VigenereCipher("Cipher", "123")
@@ -217,7 +227,7 @@ class TestEncrypting(unittest.TestCase):
     def test_VigenereDecryptedSpecials(self) -> None:
         a = VigenereCipher("CipherCipher", "!@#$%^&*()")
         self.assertEqual(str(a), "CipherCipher")
-
+    
     #VigenereCipher Int Key Encrypted
     def test_VigenereEncryptedInt(self) -> None:
         a = VigenereCipher("CipherCipher", "1234567890")
@@ -227,6 +237,8 @@ class TestEncrypting(unittest.TestCase):
     def test_VigenereDecryptedInt(self) -> None:
         a = VigenereCipher("CipherCipher", "1234567890")
         self.assertEqual(str(a), "CipherCipher")
+
+class TestCustomMappingEncrypting(unittest.TestCase):
     
     #CustomMappingCipher Non String Text Input
     def test_CustomMappingTextNoStr(self) -> None:

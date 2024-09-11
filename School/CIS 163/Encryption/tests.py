@@ -146,12 +146,12 @@ class TestCaesarEncrypting(unittest.TestCase):
     
     #CaesarCipher Big Positive Key Encrypted Value
     def test_CaesarEncryptedBigPos(self) -> None:
-        a = CaesarCipher("Cipher", 50)
-        self.assertEqual(a.cipher_text, "Agnfcp")
+        a = CaesarCipher("Cipher", 100)
+        self.assertEqual(a.cipher_text, "Yeldan")
     
     #CaesarCipher Big Positive Key Decrypted Value
     def test_CaesarDecryptedBigPos(self) -> None:
-        a = CaesarCipher("Cipher", 50)
+        a = CaesarCipher("Cipher", 100)
         self.assertEqual(str(a), "Cipher")
     
     #CaesarCipher Negative Key Encrypted Value
@@ -166,12 +166,12 @@ class TestCaesarEncrypting(unittest.TestCase):
     
     #CaesarCipher Big Negative Key Encrypted Value
     def test_CaesarEncryptedNeg(self) -> None:
-        a = CaesarCipher("Cipher", -50)
-        self.assertEqual(a.cipher_text, "Ekrjgt")
+        a = CaesarCipher("Cipher", -100)
+        self.assertEqual(a.cipher_text, "Gmtliv")
     
     #CaesarCipher Big Negative Key Decrypted Value
     def test_CaesarDecryptedNeg(self) -> None:
-        a = CaesarCipher("Cipher", -50)
+        a = CaesarCipher("Cipher", -100)
         self.assertEqual(str(a), "Cipher")
 
 class TestVigenereEncrypting(unittest.TestCase):

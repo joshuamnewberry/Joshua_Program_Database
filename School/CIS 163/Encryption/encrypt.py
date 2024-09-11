@@ -272,7 +272,7 @@ class CaesarCipher:
                     while cipher_num < 65:
                         cipher_num += 26
                 # If the character is lower
-                elif i.isupper():
+                elif i.islower():
                     # Add or subtract 26 until between 97 and 122
                     while cipher_num > 122:
                         cipher_num -= 26

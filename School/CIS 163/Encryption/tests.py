@@ -186,6 +186,17 @@ class TestEncrypting(unittest.TestCase):
         a = VigenereCipher("Cipher", "Key")
         string = str(a)
         self.assertEqual(a.key, "Key")
+
+    #VigenereCipher Int Key Value
+    def test_VigenereIntKeyValue(self) -> None:
+        a = VigenereCipher("Cipher", "123")
+        self.assertEqual(a.key, "123")
+    
+    #VigenereCipher Int Key Value Not Changed
+    def test_VigenereIntKeyValueNoChange(self) -> None:
+        a = VigenereCipher("Cipher", "123")
+        string = str(a)
+        self.assertEqual(a.key, "123")
     
     #VigenereCipher Normal Key Encrypted
     def test_VigenereEncryptedNormal(self) -> None:
@@ -205,6 +216,16 @@ class TestEncrypting(unittest.TestCase):
     #VigenereCipher Specials Key Decrypted
     def test_VigenereDecryptedSpecials(self) -> None:
         a = VigenereCipher("CipherCipher", "!@#$%^&*()")
+        self.assertEqual(str(a), "CipherCipher")
+
+    #VigenereCipher Int Key Encrypted
+    def test_VigenereEncryptedInt(self) -> None:
+        a = VigenereCipher("CipherCipher", "1234567890")
+        self.assertEqual(a.cipher_text, "DksljxJqyhft")
+    
+    #VigenereCipher Int Key Decrypted
+    def test_VigenereDecryptedInt(self) -> None:
+        a = VigenereCipher("CipherCipher", "1234567890")
         self.assertEqual(str(a), "CipherCipher")
     
     #CustomMappingCipher Non String Text Input

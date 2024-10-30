@@ -15,7 +15,7 @@ class Bank:
     name_error = "Not a valid name"
     dep_error = "Not a valid deposit"
 
-    def __init__(self, name:str=None, deposit:float=None) -> None:
+    def __init__(self, name:str = None, deposit:float = None) -> None:
         try:
             if name == None:
                 name = str(input("Enter Name: "))
@@ -36,7 +36,7 @@ class Bank:
     def __str__(self) -> str:
         return f"Name: {self.name}  Balance: {self.balance}"
     
-    def deposit(self, deposit:float=None) -> None:
+    def deposit(self, deposit:float = None) -> None:
         try:
             if deposit == None:
                 deposit = float(input("Enter Deposit amount: "))
@@ -49,7 +49,7 @@ class Bank:
         except NonPositiveError as msg:
             print(msg)
 
-    def withdraw(self, withdraw:float=None) -> None:
+    def withdraw(self, withdraw:float = None) -> None:
         try:
             if withdraw == None:
                 withdraw = float(input("Enter Withdraw amount: "))
@@ -66,7 +66,7 @@ class Bank:
         except LowBalanceError as msg:
             print(msg, str(withdraw), "dollars")
     
-    def renameCustomer(self, newName:str=None) -> None:
+    def renameCustomer(self, newName:str = None) -> None:
         try:
             if newName == None:
                 newName = str(input("Enter new name: "))

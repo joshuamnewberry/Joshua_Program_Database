@@ -1,6 +1,6 @@
 class Student:
 
-    def __init__(self, name:str="No Name", gpa:float=0, year:int=2000):
+    def __init__(self, name:str = "No Name", gpa:float = 0, year:int = 2000):
         self.name = str(name)
         self.gpa = float(gpa)
         self.year = int(year)

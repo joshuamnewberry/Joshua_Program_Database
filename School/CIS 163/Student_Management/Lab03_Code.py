@@ -84,7 +84,7 @@ class Teacher:
         return self.students
 
 class Department:
-    def __init__(self, name:str, classes: list, teachers: list) -> None:
+    def __init__(self, name:str, classes:list, teachers:list) -> None:
         if type(classes) != list or type(teachers) != list or type(name) != str:
             raise TypeError
         self.classes = classes
@@ -94,12 +94,12 @@ class Department:
     def __str__(self) -> None:
         return self.name
 
-    def add_teacher(self, teacher: Teacher) -> None:
+    def add_teacher(self, teacher:Teacher) -> None:
         if type(teacher) != Teacher:
             raise TypeError
         self.teachers.append(teacher)
 
-    def remove_teacher(self, teacher: Teacher) -> None:
+    def remove_teacher(self, teacher:Teacher) -> None:
         if type(teacher) != Teacher:
             raise TypeError
         if teacher in self.teachers:
@@ -107,12 +107,12 @@ class Department:
         else:
             print(teacher + "not in teacher list")
         
-    def add_class(self, classes: str) -> None:
+    def add_class(self, classes:str) -> None:
         if type(classes) != str:
             raise TypeError
         self.classes.append(classes)
 
-    def remove_class(self, classes: str) -> None:
+    def remove_class(self, classes:str) -> None:
         if type(classes) != str:
             raise TypeError
         if classes in self.classes:
@@ -129,20 +129,20 @@ class Department:
     def get_teachers(self):
         return self.teachers
     
-    def set_teachers(self, new_teachers: list):
+    def set_teachers(self, new_teachers:list):
         self.teachers = new_teachers
 
 class School:
-    def __init__(self, departments: list = [], students: list = []):
+    def __init__(self, departments:list = [], students:list = []):
         self.departments = departments
         self.students = students
     
-    def add_department(self, department: Department) -> None:
+    def add_department(self, department:Department) -> None:
         if type(department) != Department:
             raise TypeError
         self.departments.append(department)
     
-    def remove_department(self, department: Department) -> None:
+    def remove_department(self, department:Department) -> None:
         if type(department) != Department:
             raise TypeError
         if department in self.departments:
@@ -150,12 +150,12 @@ class School:
         else:
             print(str(department) + "Not in class list")
     
-    def add_student(self, student: Student) -> None:
+    def add_student(self, student:Student) -> None:
         if type(student) != Student:
             raise TypeError
         self.students.append(student)
     
-    def remove_student(self, student: Student) -> None:
+    def remove_student(self, student:Student) -> None:
         if type(student) != Student:
             raise TypeError
         if student in self.students:
@@ -166,11 +166,11 @@ class School:
     def get_departments(self):
         return self.departments
 
-    def set_departments(self, new_departments: list):
+    def set_departments(self, new_departments:list):
         self.departments = new_departments
 
     def get_students(self):
         return self.students
     
-    def set_students(self, new_students: list):
+    def set_students(self, new_students:list):
         self.students = new_students

@@ -19,6 +19,7 @@ def union(list1:list, list2:list) -> list:
             unionList.append(i)
     return unionList
 
+# Return a True if both lists contain exactly the same elements, otherwise return False
 def equal(list1:list, list2:list) -> list:
     # If the length of both lists are not the same, they are not equal so return False
     if len(list1) != len(list2):

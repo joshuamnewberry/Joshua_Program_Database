@@ -5,7 +5,7 @@ def setToBit(lst:list, n:int) -> list:
     # Loop from 0 to n
     for i in range(0, n):
         # If i-1 is in the list add a 1 to the bit string
-        if i-1 in lst:
+        if i+1 in lst:
             bit.append(1)
         # Otherwise add a 0 to the bit string
         else:

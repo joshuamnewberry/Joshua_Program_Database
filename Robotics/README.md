@@ -1,0 +1,1 @@
+This is my code that I've built up throughout high school (mainly 11th and 12th) and now college to control my robot for use in VEX robotics. I use odometry and a PID during autonomous period to have as accurate of a program as possible. I also have an auton selection program for use at the field.

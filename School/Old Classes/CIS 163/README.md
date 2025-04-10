@@ -1,0 +1,1 @@
+This folder contains my assignments from my Computer Science II class. In this class we did quite a bit of assignmenns and in class programming. The folders contain the longer projects we completed throughout the semester.

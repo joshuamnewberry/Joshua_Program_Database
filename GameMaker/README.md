@@ -1,0 +1,1 @@
+This folder contains some fairly rudimentary games I made. I uploaded the install package because there are A LOT of files in these small game packages most of which are not even relevant to MY actual code. If you download the .exe file you can install and run/play the game for yourself.

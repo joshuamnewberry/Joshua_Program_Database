@@ -1,0 +1,14 @@
+# Will create a folder test_start_backup on the same level as test_start and copy over all surface level files
+./backup.sh test_start
+# Will copy into test_backup folder all surface level files
+./backup.sh -d test_backup test_start
+# Will copy only files starting with download to test_backup
+./backup.sh -n download -d test_backup test_start
+# Will copy only files ending in .txt to test_start_backup
+./backup.sh -t .txt test_start
+# Will create a new folder test_new and copy all surface level files
+./backup.sh -d test_new test_start
+# Will copy over only files starting in download ending in .txt to test_backup
+./backup.sh -d test_backup -n download -t .txt test_start
+# Will copy over both folders into their respective backup folders
+./backup.sh test_start test_second_folder

@@ -1,0 +1,1 @@
+This folder contains my coding assignments from my System-Level Programming and Utilities class (git, bash, c/c++, linux, makefiles). A lot of assignments weren't coded in an actual file so are not included (e.g. writing linux commands, completing a git merge).

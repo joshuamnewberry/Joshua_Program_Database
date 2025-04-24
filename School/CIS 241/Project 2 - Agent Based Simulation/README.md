@@ -1,0 +1,1 @@
+This project has multiple different steps to it, and is mostly made up of segmented problems to code the answers for. How to zero pad numbers, filter through a list of pokemon, create random seeds, and run an experiment.
